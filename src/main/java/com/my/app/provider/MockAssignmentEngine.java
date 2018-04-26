@@ -1,4 +1,4 @@
-package com.my.app.impl;
+package com.my.app.provider;
 
 import java.util.HashMap;
 import java.util.Map;
