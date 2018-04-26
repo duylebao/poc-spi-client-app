@@ -4,18 +4,14 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.stream.Collectors;
 
+import com.my.app.util.ConfigurationLoader;
 import com.walmart.platform.exp.client.ae.context.IPropertiesProvider;
 
 public class ApplicationPropertiesProvider implements IPropertiesProvider{
-    private Properties props = new Properties();
+    private Properties props = null;
     
     public ApplicationPropertiesProvider() {
-        // mimic load from file
-        props.setProperty("color", "black");
-        props.setProperty("size", "0");
-        props.setProperty("outline", "true");
-        props.setProperty("border", "thin");
-        props.setProperty("bg-color", "grey");
+        props = ConfigurationLoader.load();
     }
     
     @Override
